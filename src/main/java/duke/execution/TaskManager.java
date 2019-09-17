@@ -107,6 +107,7 @@ public class TaskManager {
 
     /**
      * Helper function for FileManager {@link FileManager#saveToFile(Task)}
+     * Similar to done method, except this takes in int argument rather than String.
      * @param index index of done task
      */
     protected void savedDone(int index){
@@ -180,6 +181,11 @@ public class TaskManager {
         return this.listToString(foundList);
     }
 
+    /**
+     * Returns ArrayList of tasks as a String. Helper function in "list" command from user.
+     * @param taskList
+     * @return
+     */
     private String listToString(ArrayList<Task> taskList){
         StringBuilder outputMessage = new StringBuilder();
         int i = taskList.size();

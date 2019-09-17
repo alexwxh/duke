@@ -23,10 +23,6 @@ public abstract class Task {
         this.isDone = true;
     }
 
-    public boolean checkDone(){
-        return this.isDone;
-    }
-
     /**
      * Returns Task object description in a specific format for writing to save file
      * @return Task object full description for save file

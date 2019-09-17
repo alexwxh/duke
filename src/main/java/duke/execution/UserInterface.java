@@ -45,7 +45,7 @@ public class UserInterface {
     }
 
     public String printWelcomeGui(){
-        return "Hewwo from Duke (◕ω◕✿)\n";
+        return "H-hewwo from Duke (◕ω◕✿)\n";
     }
 
     /**
@@ -100,8 +100,8 @@ public class UserInterface {
      * @param listSize number of tasks left
      */
     private String generateDeleteMessage(Task task, int listSize){
-        StringBuilder outputMessage = new StringBuilder("Following task removed:\n    " + task);
-        outputMessage.append("\n  " + listSize + " tasks left in the list");
+        StringBuilder outputMessage = new StringBuilder("Following task yeeted:\n    " + task);
+        outputMessage.append("\n  " + listSize + " tasks left in the list\n");
         return outputMessage.toString();
     }
     public void printDelete(Task task, int listSize){
@@ -121,7 +121,7 @@ public class UserInterface {
     }
 
     public String printErrorGui(String message){
-        return "Error: " + message;
+        return "Error xwx: " + message;
     }
 
     /**
@@ -132,7 +132,7 @@ public class UserInterface {
         this.print("List:" + list);
     }
 
-    public String printListGui(String list){ return "List:" + list; }
+    public String printListGui(String list){ return "Listing tasks owo:" + list; }
 
     /**
      * Prints list of tasks that match keyword given by user
@@ -143,7 +143,7 @@ public class UserInterface {
     }
 
     public String printFindGui(String list){
-        return "Matching tasks:" + list;
+        return "Here are the matching tasks owo:" + list;
     }
 
     /**
@@ -159,6 +159,10 @@ public class UserInterface {
      */
     public void printExit(){
         this.print("Goodbye. Hope to see you again UwU");
+    }
+
+    public String printByeGui(){
+        return "Goodbye. This window will close soon. Hope to see you again UwU";
     }
 }
 

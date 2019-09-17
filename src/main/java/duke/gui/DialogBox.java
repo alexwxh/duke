@@ -40,6 +40,7 @@ public class DialogBox extends HBox {
         displayPicture.setImage(img);
         Circle circle = new Circle(45, 43, 40);
         displayPicture.setClip(circle);
+        this.setStyle("-fx-background-color: #D2D2D2");
     }
 
     /**
@@ -53,12 +54,15 @@ public class DialogBox extends HBox {
     }
 
     public static DialogBox getUserDialog(String text, Image img) {
-        return new DialogBox(text, img);
+        var db = new DialogBox(text, img);
+        db.setStyle("-fx-background-color: #F1FEF3");
+        return db;
     }
 
     public static DialogBox getDukeDialog(String text, Image img) {
         var db = new DialogBox(text, img);
         db.flip();
+        db.setStyle("-fx-background-color: #F4EDF9");
         return db;
     }
 }

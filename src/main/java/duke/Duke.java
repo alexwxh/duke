@@ -1,10 +1,15 @@
 package duke;
 
-import duke.execution.*;
-import javafx.application.Platform;
+import duke.execution.Command;
+import duke.execution.DukeException;
+import duke.execution.FileManager;
+import duke.execution.Parser;
+import duke.execution.TaskManager;
+import duke.execution.UserInterface;
 
 /**
- * Duke is a mini list AI project for CS2103 iP and it steals my soul :(
+ * Duke is a mini list AI project for CS2103 iP and it steals my soul
+ *  p.s. i'm not a furry i swear the uwus are just a joke :)
  */
 public class Duke{
     private static final String PATHFILE = "src/main/data/list.txt";
@@ -63,15 +68,10 @@ public class Duke{
         process.run();
     }
     /**
-     * You should have your own function to generate a response to user input.
-     * Replace this stub with your completed method.
+     * Returns String as response to user input.
      */
     public String getResponse(String input) {
-        if(input.equals("bye")){
-            Platform.exit();
-        }
         try {
-            assert !input.equals("bye"): "Code error, program should terminate.";
             Command c = Parser.parse(input);
             return c.executeGui(tasks, ui, fileManager);
         }catch(DukeException e){

@@ -82,7 +82,7 @@ public class Command {
         if(info[0].equals("list")){
             return ui.printListGui(tasks.generateList());
         }else if(info[0].equals("bye")){
-            this.isExit = true;
+            return ui.printByeGui();
         }
         return "Command not recognized?";
     }
